@@ -26,9 +26,11 @@ function galleryCard(item) {
 }
 
 function homeCard(item) {
-  return `<button class="home-art art-button" type="button" data-full="${imageUrl(item, 960)}" aria-label="${item.title}を拡大表示">
-    <picture><img src="${imageUrl(item, 480)}" alt="${item.title}" loading="eager"></picture>
-  </button>`;
+  return `<span class="home-slot">
+    <button class="home-art art-button" type="button" data-full="${imageUrl(item, 960)}" aria-label="${item.title}を拡大表示">
+      <picture><img src="${imageUrl(item, 480)}" alt="${item.title}" loading="eager"></picture>
+    </button>
+  </span>`;
 }
 
 document.querySelectorAll("[data-home-gallery]").forEach((gallery) => {
