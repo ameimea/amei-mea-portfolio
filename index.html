@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AMEI MEA — Illustrator</title>
+  <meta name="description" content="あめいメア / AMEI MEA のイラストポートフォリオ">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23100f0f'/%3E%3Cpath d='M32 7 51 32 32 57 13 32Z' fill='%238c4053' stroke='%23c19a62' stroke-width='3'/%3E%3Cpath d='m24 42 7-23h3l7 23h-5l-1.5-6h-7L26 42Z' fill='%23f3e5ca'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+  <h1 class="sr-only">AMEI MEA イラストポートフォリオ</h1>
+  <main class="home-stage" aria-label="AMEI MEA ポートフォリオ">
+    <img class="home-overlay" src="assets/home-overlay.png" alt="" width="1882" height="3342">
+
+    <div class="home-gallery home-works" data-home-gallery="works" aria-label="最新のWORKS"></div>
+    <div class="home-gallery home-illustrations" data-home-gallery="illustrations" aria-label="最新のILLUSTRATION"></div>
+
+    <a class="hotspot side-home" href="./" aria-label="ホーム"></a>
+    <a class="hotspot side-works" href="works/" aria-label="WORKS一覧"></a>
+    <a class="hotspot side-illustrations" href="illustrations/" aria-label="ILLUSTRATION一覧"></a>
+    <a class="hotspot works-view" href="works/" aria-label="WORKSをすべて見る"></a>
+    <a class="hotspot illustrations-view" href="illustrations/" aria-label="ILLUSTRATIONをすべて見る"></a>
+  </main>
+
+  <dialog id="lightbox">
+    <button class="lightbox-close" type="button" aria-label="閉じる">×</button>
+    <img alt="">
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
