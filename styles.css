@@ -100,7 +100,7 @@ dialog img { width: 100%; max-height: 84vh; object-fit: contain; }
   aspect-ratio: 2200 / 760;
   padding: clamp(20px,3vw,38px) clamp(52px,8vw,98px);
   color: var(--ink);
-  background: url("assets/tarot-frame-wide.png") center / 100% 100% no-repeat;
+  background: url("assets/tarot-frame-wide.png?v=2") center / 100% 100% no-repeat;
   filter: drop-shadow(0 9px 14px rgba(22,13,14,.35));
 }
 .gallery-header::before,
