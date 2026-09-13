@@ -46,10 +46,19 @@ document.querySelectorAll("[data-gallery]").forEach((gallery) => {
 
   const pagination = document.querySelector(".pagination");
   if (pagination && totalPages > 1) {
-    pagination.innerHTML = Array.from({ length: totalPages }, (_, index) => {
+    const pageNumbers = Array.from({ length: totalPages }, (_, index) => {
       const page = index + 1;
-      return `<a href="?page=${page}" ${page === current ? 'aria-current="page"' : ""}>${page}</a>`;
+      return `<a class="pagination-number" href="?page=${page}" ${page === current ? 'aria-current="page"' : ""}>${page}</a>`;
     }).join("");
+
+    const previous = current > 1
+      ? `<a class="pagination-step pagination-previous" href="?page=${current - 1}" aria-label="前のページ">← 前へ</a>`
+      : `<span class="pagination-step pagination-previous" aria-disabled="true">← 前へ</span>`;
+    const next = current < totalPages
+      ? `<a class="pagination-step pagination-next" href="?page=${current + 1}" aria-label="次のページ">次へ →</a>`
+      : `<span class="pagination-step pagination-next" aria-disabled="true">次へ →</span>`;
+
+    pagination.innerHTML = `${previous}<span class="pagination-status" aria-current="page">${current} / ${totalPages}</span>${pageNumbers}${next}`;
   }
 });
 
