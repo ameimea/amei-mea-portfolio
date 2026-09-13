@@ -43,8 +43,9 @@ img { display: block; }
 .home-gallery { position: absolute; z-index: 3; display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 1.88%; }
 .home-works { left: 12.06%; top: 43.46%; width: 77.08%; height: 10.69%; }
 .home-illustrations { left: 10.73%; top: 61.11%; width: 77.08%; height: 10.69%; }
-.home-slot { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; background: #eee0c5; }
-.home-art { width: 100%; height: 100%; min-width: 0; min-height: 0; padding: 0; overflow: hidden; border: 0; background: #f4efe6; cursor: zoom-in; }
+.home-slot { position: relative; display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; background: #eee0c5; }
+.home-slot::before { content: ""; position: absolute; z-index: 0; inset: -3px -3px -10px; background: #eee0c5; }
+.home-art { position: relative; z-index: 1; width: 100%; height: 100%; min-width: 0; min-height: 0; padding: 0; overflow: hidden; border: 0; background: #f4efe6; cursor: zoom-in; }
 .home-art picture, .home-art img { width: 100%; height: 100%; }
 .home-art img { object-fit: cover; }
 .home-illustrations .home-art img { object-fit: contain; background: #f5f1e9; }
