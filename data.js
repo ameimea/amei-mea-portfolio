@@ -17,5 +17,28 @@ function importedGallery(folder, prefix, count, title) {
 
 window.PORTFOLIO_DATA = {
   works: importedGallery("works", "work", 42, "WORK"),
-  illustrations: importedGallery("illustrations", "illustration", 130, "ILLUSTRATION")
+  illustrations: [
+    {
+      id: "131",
+      date: "2026-11-10T00:03:00+09:00",
+      title: "ILLUSTRATION 131",
+      note: "",
+      image: "assets/illustrations/illustration-131"
+    },
+    {
+      id: "132",
+      date: "2026-11-10T00:02:00+09:00",
+      title: "ILLUSTRATION 132",
+      note: "",
+      image: "assets/illustrations/illustration-132"
+    },
+    {
+      id: "133",
+      date: "2026-11-10T00:01:00+09:00",
+      title: "ILLUSTRATION 133",
+      note: "",
+      image: "assets/illustrations/illustration-133"
+    },
+    ...importedGallery("illustrations", "illustration", 130, "ILLUSTRATION")
+  ]
 };
